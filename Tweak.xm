@@ -177,7 +177,7 @@ void doEncrypt(){
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
        textField.placeholder = @"Encryption Key";
     }];
-     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
        textField.placeholder = @"Color (#RRGGBB)";
     }];
 
@@ -219,6 +219,6 @@ void doEncrypt(){
 	encryptedCache.countLimit = 100;
 	encryptedCache.totalCostLimit = 2100;
 
-	profilesPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingString:@"/EggCryptProfiles.txt"];
+	profilesPath = @"/var/mobile/Documents/EggCryptProfiles.txt";
 	getKeys();
 }
